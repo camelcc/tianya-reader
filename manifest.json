@@ -1,0 +1,21 @@
+﻿{
+    "name": "tianya reader",
+	"version": "0.1",
+	"description": "Tianya Reader",
+	"background_page": "background.html",
+	"page_action": {
+	    "default_icon": "icon.png",
+		"default_title": "Tianya Reader"
+	},
+    "content_scripts" : [ {
+        "matches" : [
+            "http://*.tianya.cn/*/content/*"
+        ],
+        "js" : ["contentscript.js"],
+        "run_at" : "document_idle",
+        "all_frames" : false
+    } ],
+	"permissions": [
+	    "tabs"
+    ]
+}
